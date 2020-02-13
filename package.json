@@ -1,0 +1,14 @@
+{
+  "name": "responsivewebdesign",
+  "version": "1.0.0",
+  "description": "Responsive Portfolio Design",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Kody Gilleo",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
