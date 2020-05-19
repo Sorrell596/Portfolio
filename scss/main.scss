@@ -107,7 +107,7 @@ main {
   }
 
   .job {
-    @if (lightness($primary-color) > 40) {
+    @if (lightness($primary-color) > 60) {
       background: darken($primary-color, 5);
     } @else {
       background: lighten($primary-color, 5);
@@ -125,7 +125,7 @@ main {
 
   img {
     width: 100%;
-    @if (lightness($primary-color) > 40) {
+    @if (lightness($primary-color) > 60) {
       border: #000 3px solid;
     } @else {
       border: #fff 3px solid;
@@ -151,7 +151,7 @@ main {
     font-size: 2rem;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    @if (lightness($primary-color) > 40) {
+    @if (lightness($primary-color) > 60) {
       border: #000 3px solid;
     } @else {
       border: #fff 3px solid;
@@ -174,32 +174,45 @@ main {
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem;
-  &:hover {
-    background: $secondary-color;
-    color: set-text-color($secondary-color);
-  }
 }
 
 .btn-dark {
   @extend .btn;
-  background: darken($primary-color, 75);
+  background: darken($primary-color, 50);
   color: #fff;
-  @if (lightness($primary-color) > 40) {
-    border: #000 1.5px solid;
-  } @else {
-    border: #fff 1.5px solid;
+  font-weight: 600;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
   }
+  // @if (lightness($primary-color) > 60) {
+  //   border: #000 1.5px solid;
+  // } @else {
+  //   border: #fff 1.5px solid;
+  // }
 }
 
 .btn-light {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #000;
-  @if (lightness($primary-color) > 40) {
-    border: #000 1.5px solid;
-  } @else {
-    border: #fff 1.5px solid;
+  font-weight: 600;
+  &:hover {
+    background: $secondary-color;
+    color: set-text-color($secondary-color);
   }
+  // @if (lightness($primary-color) > 60) {
+  //   border: #000 1.5px solid;
+  // } @else {
+  //   border: #fff 1.5px solid;
+  // }
+}
+
+.btn-gray {
+  @extend .btn;
+  background: #d3d3d3;
+  color: #b22222;
+  cursor: not-allowed;
 }
 
 #main-footer {
